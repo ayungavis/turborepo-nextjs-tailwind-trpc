@@ -1,0 +1,22 @@
+{
+  "name": "@design-system/react-native",
+  "version": "0.0.0",
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@myapp/eslint-config": "*",
+    "@myapp/tailwind-config": "*",
+    "@myapp/tsconfig": "*",
+    "@myapp/utils": "*",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.34.0",
+    "postcss": "^8.4.21",
+    "tailwind-variants": "^0.1.1",
+    "tailwindcss": "^3.2.7",
+    "tsup": "^6.7.0"
+  }
+}
