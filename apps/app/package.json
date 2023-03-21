@@ -15,7 +15,7 @@
     "@myapp/api": "*",
     "@myapp/auth": "*",
     "@myapp/db": "*",
-    "@myapp/design-system": "*",
+    "@design-system/react": "*",
     "@myapp/tailwind-config": "*",
     "@myapp/utils": "*",
     "@next/font": "^13.2.4",
