@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 importers:
 
@@ -43,6 +47,9 @@ importers:
 
   apps/app:
     dependencies:
+      '@design-system/react':
+        specifier: '*'
+        version: link:../../packages/design-system/react
       '@myapp/api':
         specifier: '*'
         version: link:../../packages/api
@@ -52,9 +59,6 @@ importers:
       '@myapp/db':
         specifier: '*'
         version: link:../../packages/db
-      '@myapp/design-system':
-        specifier: '*'
-        version: link:../../packages/design-system
       '@myapp/tailwind-config':
         specifier: '*'
         version: link:../../packages/config/tailwind
@@ -264,20 +268,59 @@ importers:
         specifier: ^4.9.5
         version: 4.9.5
 
-  packages/design-system:
+  packages/design-system/react:
     devDependencies:
       '@myapp/eslint-config':
         specifier: '*'
-        version: link:../config/eslint
+        version: link:../../config/eslint
       '@myapp/tailwind-config':
         specifier: '*'
-        version: link:../config/tailwind
+        version: link:../../config/tailwind
       '@myapp/tsconfig':
         specifier: '*'
-        version: link:../config/tsconfig
+        version: link:../../config/tsconfig
       '@myapp/utils':
         specifier: '*'
-        version: link:../utils
+        version: link:../../utils
+      '@types/react':
+        specifier: ^18.0.27
+        version: 18.0.27
+      autoprefixer:
+        specifier: ^10.4.13
+        version: 10.4.13(postcss@8.4.21)
+      eslint:
+        specifier: ^8.34.0
+        version: 8.34.0
+      postcss:
+        specifier: ^8.4.21
+        version: 8.4.21
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      tailwind-variants:
+        specifier: ^0.1.1
+        version: 0.1.1(tailwindcss@3.2.7)
+      tailwindcss:
+        specifier: ^3.2.7
+        version: 3.2.7(postcss@8.4.21)
+      tsup:
+        specifier: ^6.7.0
+        version: 6.7.0(postcss@8.4.21)(typescript@4.9.5)
+
+  packages/design-system/react-native:
+    devDependencies:
+      '@myapp/eslint-config':
+        specifier: '*'
+        version: link:../../config/eslint
+      '@myapp/tailwind-config':
+        specifier: '*'
+        version: link:../../config/tailwind
+      '@myapp/tsconfig':
+        specifier: '*'
+        version: link:../../config/tsconfig
+      '@myapp/utils':
+        specifier: '*'
+        version: link:../../utils
       '@types/react':
         specifier: ^18.0.27
         version: 18.0.27
