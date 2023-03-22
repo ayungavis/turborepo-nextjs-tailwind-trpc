@@ -269,10 +269,6 @@ importers:
         version: 4.9.5
 
   packages/design-system/react:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
     devDependencies:
       '@myapp/eslint-config':
         specifier: '*'
@@ -298,6 +294,9 @@ importers:
       postcss:
         specifier: ^8.4.21
         version: 8.4.21
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       tailwind-variants:
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.2.7)
