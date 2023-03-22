@@ -295,7 +295,7 @@ importers:
         specifier: ^8.4.21
         version: 8.4.21
       react:
-        specifier: ^18.2.0
+        specifier: 18.2.0
         version: 18.2.0
       tailwind-variants:
         specifier: ^0.1.1

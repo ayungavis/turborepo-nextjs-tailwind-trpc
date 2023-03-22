@@ -12,10 +12,10 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@design-system/react": "*",
     "@myapp/api": "*",
     "@myapp/auth": "*",
     "@myapp/db": "*",
-    "@design-system/react": "*",
     "@myapp/tailwind-config": "*",
     "@myapp/utils": "*",
     "@next/font": "^13.2.4",
