@@ -12,10 +12,10 @@ const config = {
       xl: ["1.25rem", { lineHeight: "1.875rem" }], // 20px - text xl
       "2xl": ["1.5rem", { lineHeight: "2rem" }], // 24px - display xs
       "3xl": ["1.875rem", { lineHeight: "2.375rem" }], // 30px - display sm
-      "4xl": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-2%" }], // 36px - display base
-      "5xl": ["3rem", { lineHeight: "3.75rem", letterSpacing: "-2%" }], // 48px - display lg
-      "6xl": ["3.75rem", { lineHeight: "4.5rem", letterSpacing: "-2%" }], // 60px - display xl
-      "7xl": ["4.5rem", { lineHeight: "5.625rem", letterSpacing: "-2%" }], // 72px - display 2xl
+      "4xl": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.02em" }], // 36px - display base
+      "5xl": ["3rem", { lineHeight: "3.75rem", letterSpacing: "-0.02em" }], // 48px - display lg
+      "6xl": ["3.75rem", { lineHeight: "4.5rem", letterSpacing: "-0.02em" }], // 60px - display xl
+      "7xl": ["4.5rem", { lineHeight: "5.625rem", letterSpacing: "-0.02em" }], // 72px - display 2xl
     },
     colors: {
       white: "#ffffff",
