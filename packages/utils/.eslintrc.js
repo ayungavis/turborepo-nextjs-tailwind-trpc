@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["@chasm/eslint-config"],
+  extends: ["@myapp/eslint-config"],
 };
