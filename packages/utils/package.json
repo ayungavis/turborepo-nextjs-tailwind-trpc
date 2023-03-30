@@ -16,16 +16,16 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@myapp/tsconfig": "*",
     "@myapp/eslint-config": "*",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
-    "eslint": "^8.15.0",
-    "react": "^18.1.0",
-    "tsup": "^5.10.1",
-    "typescript": "^4.5.3",
+    "@myapp/tsconfig": "*",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "clsx": "^1.2.1",
+    "eslint": "^8.34.0",
+    "react": "18.2.0",
     "tailwind-merge": "^1.10.0",
-    "clsx": "^1.2.1"
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.5"
   },
   "publishConfig": {
     "access": "public"

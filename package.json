@@ -19,18 +19,17 @@
     "with-env": "dotenv -e .env --"
   },
   "dependencies": {
+    "@eslint/js": "^8.37.0",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@manypkg/cli": "^0.20.0",
+    "@myapp/eslint-config": "*",
     "@types/prettier": "^2.7.2",
+    "dotenv-cli": "^7.1.0",
     "eslint": "^8.34.0",
+    "postcss-import": "^15.1.0",
     "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.4",
     "turbo": "^1.8.3",
     "typescript": "^4.9.5"
-  },
-  "devDependencies": {
-    "@myapp/eslint-config": "*",
-    "dotenv-cli": "^7.1.0",
-    "postcss-import": "^15.1.0",
-    "prettier-plugin-tailwindcss": "^0.2.4"
   }
 }

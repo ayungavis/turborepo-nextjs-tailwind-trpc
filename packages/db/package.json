@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push --skip-generate",
-    "dev": "prisma studio --port 5556"
+    "db:generate": "npx prisma generate",
+    "db:push": "npx prisma db push --skip-generate",
+    "dev": "npx prisma studio --port 5556"
   },
   "dependencies": {
     "@prisma/client": "^4.11.0"

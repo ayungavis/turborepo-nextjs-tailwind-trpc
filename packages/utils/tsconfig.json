@@ -1,8 +1,5 @@
 {
-  "extends": "@myapp/tsconfig/react-library.json",
-  "compilerOptions": {
-    "composite": false
-  },
+  "extends": "@myapp/tsconfig/base.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

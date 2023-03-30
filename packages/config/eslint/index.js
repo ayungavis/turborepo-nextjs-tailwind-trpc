@@ -1,5 +1,9 @@
 /** @type {import("eslint").Linter.Config} */
 const config = {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "@myapp/tsconfig/base.json",
+  },
   extends: [
     "next",
     "turbo",
