@@ -15,9 +15,11 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
+  "dependencies": {
+    "@myapp/tsconfig": "*"
+  },
   "devDependencies": {
     "@myapp/eslint-config": "*",
-    "@myapp/tsconfig": "*",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "clsx": "^1.2.1",
