@@ -232,10 +232,9 @@ importers:
       tailwind-merge: ^1.10.0
       tsup: ^6.7.0
       typescript: ^4.9.5
-    dependencies:
-      '@myapp/tsconfig': link:../config/tsconfig
     devDependencies:
       '@myapp/eslint-config': link:../config/eslint
+      '@myapp/tsconfig': link:../config/tsconfig
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       clsx: 1.2.1
