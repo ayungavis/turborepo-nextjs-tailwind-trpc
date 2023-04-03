@@ -17,6 +17,7 @@
     "@myapp/db": "*",
     "@myapp/design-system": "*",
     "@myapp/tailwind-config": "*",
+    "@myapp/utils": "*",
     "@next/font": "^13.2.4",
     "@tanstack/react-query": "^4.24.10",
     "@trpc/client": "^10.14.0",
