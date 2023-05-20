@@ -15,8 +15,8 @@ export function truncateText(
   const truncated = text.substring(0, maxLength);
 
   if (lastChars)
-    return truncated + '...' + text.substring(text.length - lastChars);
-  return truncated + '...';
+    return truncated + "..." + text.substring(text.length - lastChars);
+  return truncated + "...";
 }
 
 /**
@@ -26,7 +26,7 @@ export function truncateText(
  * @returns
  */
 export function getInitials(fullName: string): string {
-  const names = fullName.split(' ');
+  const names = fullName.split(" ");
   const firstInitial = names[0][0];
 
   if (names.length === 2) {
@@ -46,11 +46,11 @@ export function getInitials(fullName: string): string {
  */
 export function formatCurrency(
   amount: number,
-  currencyCode = 'USD',
-  locale = 'en-US',
+  currencyCode = "USD",
+  locale = "en-US",
 ): string {
   return new Intl.NumberFormat(locale, {
-    style: 'currency',
+    style: "currency",
     currency: currencyCode,
   }).format(amount);
 }
@@ -61,8 +61,18 @@ export function formatCurrency(
  * @param {string} locale - The BCP 47 language tag representing the locale.
  * @returns {string} The formatted decimal string.
  */
-export function formatNumber(amount: number, locale = 'en-US'): string {
+export function formatNumber(amount: number, locale = "en-US"): string {
   return new Intl.NumberFormat(locale, {
-    style: 'decimal',
+    style: "decimal",
   }).format(amount);
+}
+
+/**
+ * Capitalizes the first word in a string after converting the entire string to lowercase.
+ *
+ * @param {string} str - The string to capitalize.
+ * @returns {string} The capitalized string.
+ */
+export function capitalizeFirstWord(str: string): string {
+  return str.toLowerCase().replace(/^\w/, (char) => char.toUpperCase());
 }
