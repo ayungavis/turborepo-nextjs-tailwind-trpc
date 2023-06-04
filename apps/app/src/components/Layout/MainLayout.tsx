@@ -1,4 +1,5 @@
 import { type ComponentPropsWithoutRef } from "react";
+import Head from "next/head";
 
 import { cn } from "@myapp/utils";
 
@@ -10,8 +11,13 @@ export const MainLayout = ({
   ...props
 }: MainLayoutProps) => {
   return (
-    <main className={cn(className)} {...props}>
-      {children}
-    </main>
+    <>
+      <Head>
+        <title>My App</title>
+      </Head>
+      <main className={cn(className)} {...props}>
+        {children}
+      </main>
+    </>
   );
 };

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "~/styles/globals.css";
-import "@myapp/design-system/styles.css";
+import "@design-system/react/styles.css";
 import type { AppType } from "next/app";
 import { Inter } from "@next/font/google";
 import type { Session } from "next-auth";

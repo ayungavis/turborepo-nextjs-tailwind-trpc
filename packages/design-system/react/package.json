@@ -1,5 +1,5 @@
 {
-  "name": "@myapp/design-system",
+  "name": "@design-system/react",
   "version": "0.0.0",
   "types": "./dist/index.d.ts",
   "sideEffects": [

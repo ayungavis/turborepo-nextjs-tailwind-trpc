@@ -3,6 +3,7 @@ packages:
   - packages/api
   - packages/auth
   - packages/db
-  - packages/design-system
+  - packages/design-system/react
+  - packages/design-system/react-native
   - packages/utils
   - packages/config/*
