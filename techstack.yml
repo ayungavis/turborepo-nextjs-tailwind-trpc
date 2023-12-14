@@ -1,11 +1,11 @@
 repo_name: ayungavis/turborepo-nextjs-tailwind-trpc
-report_id: ebf626adc4116599c0f552a4bd0e0d7e
+report_id: caadbf3b81073e14b294ddcb11bf6353
 repo_type: Public
-timestamp: '2023-11-24T02:05:11+00:00'
+timestamp: '2023-12-14T13:21:00+00:00'
 requested_by: ayungavis
 provider: github
 branch: main
-detected_tools_count: 29
+detected_tools_count: 31
 tools:
 - name: CSS 3
   description: The latest evolution of the Cascading Style Sheets language
@@ -44,7 +44,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
-  detection_source: packages/design-system/react/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: Next.js
@@ -56,8 +56,8 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/5936/nextjs.png
-  detection_source_url: apps/app/package.json
-  detection_source: packages/auth/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-22 03:19:19.000000000 Z
 - name: Node.js
@@ -72,6 +72,18 @@ tools:
   detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-22 03:19:19.000000000 Z
+- name: PostCSS
+  description: Transform CSS with JS plugins
+  website_url: https://github.com/postcss/postcss
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/3339/rlFcjEdI.png
+  detection_source: apps/app/package.json
+  last_updated_by: Wahyu Kurniawan
+  last_updated_on: 2023-03-22 03:19:19.000000000 Z
 - name: React
   description: A JavaScript library for building user interfaces
   website_url: https://reactjs.org/
@@ -82,8 +94,8 @@ tools:
   category: Libraries
   sub_category: Javascript UI Libraries
   image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
-  detection_source_url: apps/app/package.json
-  detection_source: packages/utils/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: Tailwind CSS
@@ -95,7 +107,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Front-End Frameworks
   image_url: https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png
-  detection_source: packages/design-system/react/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: Prisma
@@ -108,7 +120,7 @@ tools:
   category: Data Stores
   sub_category: Object Relational Mapper (ORM)
   image_url: https://img.stackshare.io/service/8680/Logo_Symbol_White.jpg
-  detection_source_url: packages/db/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/packages/db/package.json
   detection_source: packages/db/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-30 00:14:43.000000000 Z
@@ -133,7 +145,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
-  detection_source: packages/utils/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-22 03:19:19.000000000 Z
 - name: Git
@@ -166,7 +178,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
-  detection_source_url: package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/package.json
   detection_source: package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-30 00:14:43.000000000 Z
@@ -178,7 +190,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
-  detection_source: packages/utils/package.json
+  detection_source: packages/config/eslint/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: Zod
@@ -187,9 +199,17 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/48521/default_eea961e4c374e68a1c7eb5bbc9e4a39920890342.png
-  detection_source: packages/api/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-22 03:19:19.000000000 Z
+- name: superJSON
+  website_url: https://github.com/blitz-js/superjson
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/25051/default_e6d588b7b89872630cad4650352e935999e0d113.png
+  detection_source: apps/app/package.json
+  last_updated_by: Wahyu Kurniawan
+  last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: "@types/eslint"
   description: TypeScript definitions for eslint
   package_url: https://www.npmjs.com/@types/eslint
@@ -200,7 +220,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18156/default_9663441986aa2be78296ccf617e43ef9e612b34e.png
-  detection_source_url: packages/config/eslint/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/packages/config/eslint/package.json
   detection_source: packages/config/eslint/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
@@ -214,7 +234,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source_url: apps/app/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
   detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
@@ -228,7 +248,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16943/default_c17ccfb3dc0510bb2c684b87ee080a74a9728c34.png
-  detection_source_url: package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/package.json
   detection_source: package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-30 00:14:43.000000000 Z
@@ -242,8 +262,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15894/default_1d65e37e65b7f80761374f0202776043277d505d.png
-  detection_source_url: apps/app/package.json
-  detection_source: packages/utils/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: "@types/react-dom"
@@ -256,8 +276,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15946/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
-  detection_source_url: apps/app/package.json
-  detection_source: packages/utils/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: "@typescript-eslint/eslint-plugin"
@@ -270,7 +290,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: packages/config/eslint/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/packages/config/eslint/package.json
   detection_source: packages/config/eslint/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
@@ -284,7 +304,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
-  detection_source_url: packages/config/eslint/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/packages/config/eslint/package.json
   detection_source: packages/config/eslint/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
@@ -298,7 +318,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15879/default_0b10af8ca19c215f781dc07442e75bdc831089d0.png
-  detection_source_url: packages/config/eslint/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/packages/config/eslint/package.json
   detection_source: packages/config/eslint/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-30 00:14:43.000000000 Z
@@ -312,31 +332,30 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15817/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: packages/config/eslint/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/packages/config/eslint/package.json
   detection_source: packages/config/eslint/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
-- name: postcss
-  description: Tool for transforming styles with JS plugins
-  package_url: https://www.npmjs.com/postcss
-  version: 8.4.21
-  license: MIT
-  open_source: true
+- name: next-auth
+  description: Authentication for Next.js
+  package_url: https://www.npmjs.com/next-auth
+  version: 4.20.1
+  open_source: false
   hosted_saas: false
-  category: Libraries
-  sub_category: npm Packages
-  image_url: https://img.stackshare.io/package/16012/default_7a88bebb451873cc63bd99007de5bd3bb8ef85de.png
-  detection_source_url: apps/app/package.json
-  detection_source: packages/design-system/react/package.json
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/npm/image.png
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
   vulnerabilities:
-  - name: PostCSS line return parsing error
-    cve_id: CVE-2023-44270
-    cve_url: https://github.com/advisories/GHSA-7fh5-64p2-3v2j
-    detected_date: Oct 4
+  - name: Possible user mocking that bypasses basic authentication
+    cve_id: CVE-2023-48309
+    cve_url: https://github.com/advisories/GHSA-v64w-49xw-qq89
+    detected_date: Nov 25
     severity: moderate
-    first_patched: 8.4.31
+    first_patched: 4.24.5
 - name: postcss-import
   description: PostCSS plugin to import CSS files
   package_url: https://www.npmjs.com/postcss-import
@@ -347,7 +366,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16086/default_d4e765f8a43dcfd232c8b9ee9732058bc27c727a.png
-  detection_source_url: package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/package.json
   detection_source: package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-30 00:14:43.000000000 Z
@@ -361,8 +380,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: apps/app/package.json
-  detection_source: packages/auth/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
 - name: tailwindcss
@@ -375,7 +394,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17398/default_2cd7ed1c123f2fca074a6f4b16c4e73d5bfe82be.png
-  detection_source_url: apps/app/package.json
-  detection_source: packages/design-system/react/package.json
+  detection_source_url: https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc/blob/main/apps/app/package.json
+  detection_source: apps/app/package.json
   last_updated_by: Wahyu Kurniawan
   last_updated_on: 2023-03-29 22:06:31.000000000 Z
