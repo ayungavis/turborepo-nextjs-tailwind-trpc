@@ -1,0 +1,12 @@
+{
+  "extends": "@shui/tsconfig/react-library.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["*.ts", ".tsx", "src"],
+  "exclude": ["dist", "build", "node_modules", "scripts"]
+}

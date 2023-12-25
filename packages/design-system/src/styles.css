@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Mode 1 */
+  /* colors */
+  --blue-100: rgb(230, 230, 254);
+  --blue-1000: rgb(0, 0, 49);
+  --blue-200: rgb(204, 204, 253);
+  --blue-300: rgb(153, 153, 251);
+  --blue-400: rgb(102, 102, 249);
+  --blue-500: rgb(51, 51, 247);
+  --blue-600: rgb(0, 0, 245);
+  --blue-700: rgb(0, 0, 196);
+  --blue-800: rgb(0, 0, 147);
+  --blue-900: rgb(0, 0, 98);
+  --cyan-100: rgb(242, 255, 255);
+  --cyan-1000: rgb(24, 50, 50);
+  --cyan-200: rgb(228, 254, 254);
+  --cyan-300: rgb(202, 253, 254);
+  --cyan-400: rgb(175, 253, 253);
+  --cyan-500: rgb(149, 252, 253);
+  --cyan-600: rgb(122, 251, 252);
+  --cyan-700: rgb(98, 201, 202);
+  --cyan-800: rgb(73, 151, 151);
+  --cyan-900: rgb(49, 100, 101);
+  --green-success-100: rgb(234, 250, 240);
+  --green-success-1000: rgb(8, 42, 22);
+  --green-success-200: rgb(212, 246, 226);
+  --green-success-300: rgb(170, 237, 196);
+  --green-success-400: rgb(127, 227, 167);
+  --green-success-500: rgb(85, 218, 137);
+  --green-success-600: rgb(42, 209, 108);
+  --green-success-700: rgb(34, 167, 86);
+  --green-success-800: rgb(25, 125, 65);
+  --green-success-900: rgb(17, 84, 43);
+  --neutral-100: rgb(241, 241, 242);
+  --neutral-1000: rgb(27, 27, 30);
+  --neutral-200: rgb(227, 227, 228);
+  --neutral-300: rgb(190, 190, 193);
+  --neutral-400: rgb(148, 148, 153);
+  --neutral-50: rgb(247, 247, 248);
+  --neutral-500: rgb(112, 111, 118);
+  --neutral-600: rgb(76, 75, 84);
+  --neutral-700: rgb(61, 60, 67);
+  --neutral-800: rgb(46, 45, 51);
+  --neutral-900: rgb(36, 36, 40);
+  --neutral-black: rgb(0, 0, 0);
+  --neutral-white: rgb(255, 255, 255);
+  --primary-100: rgb(235, 245, 246);
+  --primary-1000: rgb(0, 45, 52);
+  --primary-200: rgb(215, 235, 238);
+  --primary-300: rgb(163, 208, 215);
+  --primary-400: rgb(104, 178, 189);
+  --primary-500: rgb(52, 152, 166);
+  --primary-600: rgb(1, 126, 144);
+  --primary-700: rgb(1, 101, 115);
+  --primary-800: rgb(1, 76, 87);
+  --primary-900: rgb(0, 60, 69);
+  --red-error-100: rgb(254, 232, 230);
+  --red-error-1000: rgb(49, 6, 0);
+  --red-error-200: rgb(253, 210, 204);
+  --red-error-300: rgb(251, 164, 153);
+  --red-error-400: rgb(249, 119, 102);
+  --red-error-500: rgb(247, 73, 51);
+  --red-error-600: rgb(245, 28, 0);
+  --red-error-700: rgb(196, 22, 0);
+  --red-error-800: rgb(147, 17, 0);
+  --red-error-900: rgb(98, 11, 0);
+  --secondary-100: rgb(239, 253, 248);
+  --secondary-1000: rgb(17, 81, 61);
+  --secondary-200: rgb(223, 250, 242);
+  --secondary-300: rgb(180, 244, 224);
+  --secondary-400: rgb(132, 237, 204);
+  --secondary-500: rgb(89, 231, 186);
+  --secondary-600: rgb(48, 225, 169);
+  --secondary-700: rgb(38, 180, 135);
+  --secondary-800: rgb(29, 136, 102);
+  --secondary-900: rgb(23, 108, 81);
+  --yellow-warning-100: rgb(254, 252, 230);
+  --yellow-warning-1000: rgb(49, 45, 0);
+  --yellow-warning-200: rgb(253, 249, 204);
+  --yellow-warning-300: rgb(251, 242, 153);
+  --yellow-warning-400: rgb(249, 236, 102);
+  --yellow-warning-500: rgb(247, 229, 51);
+  --yellow-warning-600: rgb(245, 223, 0);
+  --yellow-warning-700: rgb(196, 178, 0);
+  --yellow-warning-800: rgb(147, 134, 0);
+  --yellow-warning-900: rgb(98, 89, 0);
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  opacity: 0;
+}

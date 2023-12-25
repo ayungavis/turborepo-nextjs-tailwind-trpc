@@ -1,0 +1,35 @@
+{
+  "name": "@shui/{{ name }}",
+  "private": true,
+  "version": "0.1.0",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@shui/eslint-config": "workspace:^0.2.0",
+    "@shui/prettier-config": "workspace:^0.1.0",
+    "@shui/tsconfig": "workspace:^0.1.0",
+    "eslint": "^8.53.0",
+    "typescript": "^5.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@shui/eslint-config/base"
+    ]
+  },
+  "prettier": "@shui/prettier-config"
+}

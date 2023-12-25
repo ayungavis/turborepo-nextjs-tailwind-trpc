@@ -1,87 +1,70 @@
-# Turborepo NextJS + Tailwind + tRPC
+# Monorepo Starter
 
 ## About
 
-Ever wondered how to migrate your T3 application into a monorepo? Stop right here! This is the perfect starter repo to get you running with the perfect stack!
-
-It uses [Turborepo](https://turborepo.org/) and contains:
+It uses [Turborepo](https://turbo.build/repo) to manage the monorepo. And contains:
 
 ```
 .github
   └─ workflows
         └─ CI with pnpm cache setup
 .vscode
-  └─ Recommended extensions and settings for VSCode users
+  └─ recommended extensions and settings for VSCode users
 apps
-  └─ next.js
-      ├─ Next.js 13
-      ├─ React 18
-      ├─ Tailwind CSS
-      └─ E2E Typesafe API Server & Client
+  └─ list of apps
 packages
- ├─ api
- |   └─ tRPC v10 router definition
- ├─ auth
- |   └─ authentication using next-auth
- ├─ config
- |   ├─ eslint
- |   ├─ tailwind
- |   └─ tsconfig
- ├─ db
- |   └─ typesafe db-calls using Prisma
  ├─ design-system
- |   └─ the design system of your app
+ |   └─ reusable components for the apps
+ |      ├─ Radix UI
+ |      └─ Tailwind CSS
  └─ utils
-     └─ utility functions
+     └─ reusable utilities for the apps
+tooling
+ ├─ eslint
+ ├─ github
+ ├─ prettier
+ ├─ tailwind
+ └─ typescript
 ```
 
-## Quick Start
+## Getting Started
 
 To get it running, follow the steps below:
 
-### Setup dependencies
+##### Setup dependencies
 
-```diff
-# Install dependencies
-pnpm i
-
-# In packages/db/prisma update schema.prisma provider to use sqlite
-# or use your own database provider
-- provider = "postgresql"
-+ provider = "sqlite"
-
-# Configure environment variables.
-# There is an `.env.example` in the root directory you can use for reference
-cp .env.example .env
-
-# Push the Prisma schema to your database
-pnpm db:push
+```bash
+pnpm install
 ```
 
+##### Start the apps
+
+```bash
+pnpm dev
+```
+
+##### Build the apps
+
+```bash
+pnpm build
+```
+
+### Adding a new package
+
+To add a new package, simply run `pnpm turbo gen init` in the monorepo root. This will prompt you for a package name as well as if you want to install any dependencies to the new package (of course you can also do this yourself later).
+
+The generator sets up the `package.json`, `tsconfig.json` and a `index.ts`, as well as configures all the necessary configurations for tooling around your package such as formatting, linting and typechecking. When the package is created, you're ready to go build out the package.
+
 ## Deployment
-
-### Next.js
-
-#### Prerequisites
-
-_We do not recommend deploying a SQLite database on serverless environments since the data wouldn't be persisted. I provisioned a quick Postgresql database on [Railway](https://railway.app), but you can of course use any other database provider. Make sure the prisma schema is updated to use the correct database._
-
-**Please note that the Next.js application with tRPC must be deployed in order for the Expo app to communicate with the server in a production environment.**
 
 #### Deploy to Vercel
 
 Let's deploy the Next.js application to [Vercel](https://vercel.com/). If you have ever deployed a Turborepo app there, the steps are quite straightforward. You can also read the [official Turborepo guide](https://vercel.com/docs/concepts/monorepos/turborepo) on deploying to Vercel.
 
-1. Create a new project on Vercel, select the `apps/app` folder as the root directory and apply the following build settings:
+1. Create a new project on Vercel, select the `apps/landing` or `apps/dashboard` folder as the root directory and apply the following build settings:
 
 <img width="927" alt="Vercel deployment settings" src="https://user-images.githubusercontent.com/11340449/201974887-b6403a32-5570-4ce6-b146-c486c0dbd244.png">
 
 > The install command filters out the expo package and saves a few second (and cache size) of dependency installation. The build command makes us build the application using Turbo.
 
-2. Add your `DATABASE_URL` environment variable.
-
-3. Done! Your app should successfully deploy. Assign your domain and use that instead of `localhost` for the `url` in the Expo app so that your Expo app can communicate with your backend when you are not in development.
-
-## References
-
-The stack originates from [create-t3-app](https://github.com/t3-oss/create-t3-app) and [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo).
+2. Done! Your app should successfully deploy.

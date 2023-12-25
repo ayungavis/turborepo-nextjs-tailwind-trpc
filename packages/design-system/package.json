@@ -1,0 +1,123 @@
+{
+  "name": "@shui/design-system",
+  "private": true,
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./Accordion": {
+      "types": "./dist/components/Accordion/index.d.ts",
+      "import": "./dist/components/Accordion/index.mjs",
+      "require": "./dist/components/Accordion/index.js"
+    },
+    "./Badge": {
+      "types": "./dist/components/Badge/index.d.ts",
+      "import": "./dist/components/Badge/index.mjs",
+      "require": "./dist/components/Badge/index.js"
+    },
+    "./Banner": {
+      "types": "./dist/components/Banner/index.d.ts",
+      "import": "./dist/components/Banner/index.mjs",
+      "require": "./dist/components/Banner/index.js"
+    },
+    "./Button": {
+      "types": "./dist/components/Button/index.d.ts",
+      "import": "./dist/components/Button/index.mjs",
+      "require": "./dist/components/Button/index.js"
+    },
+    "./Card": {
+      "types": "./dist/components/Card/index.d.ts",
+      "import": "./dist/components/Card/index.mjs",
+      "require": "./dist/components/Card/index.js"
+    },
+    "./CustomIcon": {
+      "types": "./dist/components/CustomIcon/index.d.ts",
+      "import": "./dist/components/CustomIcon/index.mjs",
+      "require": "./dist/components/CustomIcon/index.js"
+    },
+    "./Dropdown": {
+      "types": "./dist/components/Dropdown/index.d.ts",
+      "import": "./dist/components/Dropdown/index.mjs",
+      "require": "./dist/components/Dropdown/index.js"
+    },
+    "./Field": {
+      "types": "./dist/components/Field/index.d.ts",
+      "import": "./dist/components/Field/index.mjs",
+      "require": "./dist/components/Field/index.js"
+    },
+    "./Heading": {
+      "types": "./dist/components/Heading/index.d.ts",
+      "import": "./dist/components/Heading/index.mjs",
+      "require": "./dist/components/Heading/index.js"
+    },
+    "./HighlightIcon": {
+      "types": "./dist/components/HighlightIcon/index.d.ts",
+      "import": "./dist/components/HighlightIcon/index.mjs",
+      "require": "./dist/components/HighlightIcon/index.js"
+    },
+    "./Pagination": {
+      "types": "./dist/components/Pagination/index.d.ts",
+      "import": "./dist/components/Pagination/index.mjs",
+      "require": "./dist/components/Pagination/index.js"
+    },
+    "./Table": {
+      "types": "./dist/components/Table/index.d.ts",
+      "import": "./dist/components/Table/index.mjs",
+      "require": "./dist/components/Table/index.js"
+    },
+    "./Toast": {
+      "types": "./dist/components/Toast/index.d.ts",
+      "import": "./dist/components/Toast/index.mjs",
+      "require": "./dist/components/Toast/index.js"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules dist",
+    "build": "pnpm run build:tsup && pnpm run build:exports",
+    "build:tsup": "tsup",
+    "build:exports": "node scripts/updateExports.js",
+    "dev": "node scripts/watchChanges.js",
+    "lint": "eslint .",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit",
+    "analyze": "node scripts/analyze.js"
+  },
+  "peerDependencies": {
+    "next": "^14.0.2",
+    "react": "18.2.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@shui/utils": "workspace:^0.1.0",
+    "sass": "^1.69.5",
+    "tailwind-variants": "^0.1.19"
+  },
+  "devDependencies": {
+    "@shui/eslint-config": "workspace:^0.2.0",
+    "@shui/prettier-config": "workspace:^0.1.0",
+    "@shui/tailwind-config": "workspace:^0.1.0",
+    "@shui/tsconfig": "workspace:^0.1.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
+    "tailwindcss": "3.4.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "prettier": "@shui/prettier-config"
+}

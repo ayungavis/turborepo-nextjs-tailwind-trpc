@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["@shui/eslint-config/base"]
+}
