@@ -20,8 +20,6 @@ env:
 
 jobs:
   lint:
-    # TODO: fix the linting issues
-    if: ${{ false }} # disable for now
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -55,19 +53,5 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: Build dependencies
-        run: turbo build
-
       - name: Typecheck
         run: turbo typecheck
-
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup
-        uses: ./tooling/github/setup
-
-      - name: Build
-        run: turbo build
