@@ -12,33 +12,24 @@ const config = {
     node: true,
   },
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: true,
-  },
+  parserOptions: { project: true },
   plugins: ["@typescript-eslint", "import", "unused-imports"],
   rules: {
     "turbo/no-undeclared-env-vars": "off",
-    "@typescript-eslint/ban-ts-comment": "error",
-    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
-      {
-        argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_",
-        caughtErrorsIgnorePattern: "^_",
-      },
+      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
     ],
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       { prefer: "type-imports", fixStyle: "separate-type-imports" },
     ],
     "@typescript-eslint/no-misused-promises": [
-      0,
+      2,
       { checksVoidReturn: { attributes: false } },
     ],
     "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
-    "no-bitwise": "off",
-    "no-useless-escape": "off",
+    "@typescript-eslint/ban-ts-comment": "error",
     "no-console": "warn",
     "import/first": "error",
     "import/newline-after-import": "error",
@@ -46,9 +37,9 @@ const config = {
     "unused-imports/no-unused-imports": "error",
   },
   ignorePatterns: [
-    "**/.eslintrc.cjs",
     "**/*.config.js",
     "**/*.config.cjs",
+    "**/.eslintrc.cjs",
     ".next",
     "dist",
     "pnpm-lock.yaml",

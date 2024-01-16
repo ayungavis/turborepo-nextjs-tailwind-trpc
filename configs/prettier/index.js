@@ -1,33 +1,30 @@
 import { fileURLToPath } from "url";
 
-/** @typedef  {import("prettier").Config} PrettierConfig */
+/** @typedef {import("prettier").Config} PrettierConfig */
 /** @typedef {import("prettier-plugin-tailwindcss").PluginOptions} TailwindConfig */
-/** @typedef  {import("@ianvs/prettier-plugin-sort-imports").PluginConfig} SortImportsConfig */
+/** @typedef {import("@ianvs/prettier-plugin-sort-imports").PluginConfig} SortImportsConfig */
 
 /** @type { PrettierConfig | SortImportsConfig | TailwindConfig } */
 const config = {
-  arrowParens: "always",
-  printWidth: 80,
-  singleQuote: false,
-  jsxSingleQuote: false,
-  semi: true,
-  trailingComma: "all",
-  tabWidth: 2,
   plugins: [
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
   ],
   tailwindConfig: fileURLToPath(
-    new URL("../../tooling/tailwind/tailwind.config.ts", import.meta.url),
+    new URL("../../tooling/tailwind/index.ts", import.meta.url),
   ),
+  tailwindFunctions: ["cn", "cva"],
   importOrder: [
+    "<TYPES>",
     "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
     "^(next/(.*)$)|^(next$)",
     "^(expo(.*)$)|^(expo$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^@shui/(.*)$",
+    "<TYPES>^@acme",
+    "^@acme/(.*)$",
     "",
+    "<TYPES>^[.|..|~]",
     "^~/",
     "^[../]",
     "^[./]",
