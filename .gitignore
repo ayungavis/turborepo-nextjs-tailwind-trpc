@@ -48,3 +48,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# vscode
+.idea
+./**/.idea
