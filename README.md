@@ -1,4 +1,4 @@
-# Monorepo Starter
+# Turborepo NextJS + Expo Starter Kit
 
 ## About
 
@@ -9,16 +9,23 @@ It uses [Turborepo](https://turbo.build/repo) to manage the monorepo. And contai
   └─ workflows
         └─ CI with pnpm cache setup
 .vscode
-  └─ recommended extensions and settings for VSCode users
+  └─ Recommended extensions and settings for VSCode users
 apps
-  └─ list of apps
+  ├─ landing
+  |   ├─ Next.js 14
+  |   ├─ Radix UI
+  |   └─ Tailwind CSS
+  └─ dashboard
+      ├─ Next.js 14
+      ├─ Radix UI
+      └─ Tailwind CSS
 packages
  ├─ design-system
- |   └─ reusable components for the apps
+ |   └─ Reusable components for the apps
  |      ├─ Radix UI
  |      └─ Tailwind CSS
  └─ utils
-     └─ reusable utilities for the apps
+     └─ Utility functions
 tooling
  ├─ eslint
  ├─ github
@@ -68,3 +75,17 @@ Let's deploy the Next.js application to [Vercel](https://vercel.com/). If you ha
 > The install command filters out the expo package and saves a few second (and cache size) of dependency installation. The build command makes us build the application using Turbo.
 
 2. Done! Your app should successfully deploy.
+
+
+## References
+
+- [Turborepo](https://turbo.build/repo)
+- [T3-OSS](https://github.com/t3-oss/create-t3-turbo)
+
+## License
+
+MIT License
+
+<hr>
+
+© 2023 Wahyu Kurniawan
