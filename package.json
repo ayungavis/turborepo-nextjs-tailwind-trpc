@@ -1,19 +1,19 @@
 {
-  "name": "shui-interface",
+  "name": "monorepo-boilerplate",
   "private": true,
   "engines": {
-    "node": ">=18.18.2"
+    "node": ">=20.10"
   },
-  "packageManager": "pnpm@8.10.5",
+  "packageManager": "pnpm@8.14.0",
   "scripts": {
+    "postinstall": "pnpm lint:ws",
     "build": "turbo build",
-    "clean": "git clean -xdf node_modules && pnpm run clean:all",
+    "clean": "git clean -xdf node_modules && pnpm run clean:workspaces && pnpm run clean:all",
     "clean:all": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "clean:workspaces": "turbo clean",
-    "postinstall": "pnpm lint:ws",
+    "db:push": "pnpm -F db push",
+    "db:studio": "pnpm -F db studio",
     "dev": "turbo dev --parallel",
-    "dev:landing": "turbo dev --filter=!dashboard",
-    "dev:dashboard": "turbo dev --filter=!landing",
     "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
     "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
     "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
@@ -22,11 +22,11 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@shui/prettier-config": "workspace:^0.1.0",
+    "@acme/prettier-config": "workspace:^0.1.0",
     "@turbo/gen": "^1.10.16",
     "prettier": "^3.1.0",
     "turbo": "^1.10.16",
     "typescript": "^5.2.2"
   },
-  "prettier": "@shui/prettier-config"
+  "prettier": "@acme/prettier-config"
 }
