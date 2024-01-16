@@ -16,7 +16,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         type: "input",
         name: "name",
         message:
-          "What is the name of the package? (You can skip the `@shui/` prefix)",
+          "What is the name of the package? (You can skip the `@acme/` prefix)",
       },
       {
         type: "input",
@@ -28,8 +28,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     actions: [
       (answers) => {
         if ("name" in answers && typeof answers.name === "string") {
-          if (answers.name.startsWith("@shui/")) {
-            answers.name = answers.name.replace("@shui/", "");
+          if (answers.name.startsWith("@acme/")) {
+            answers.name = answers.name.replace("@acme/", "");
           }
         }
         return "Config sanitized";
@@ -43,11 +43,6 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         type: "add",
         path: "packages/{{ name }}/tsconfig.json",
         templateFile: "templates/tsconfig.json.hbs",
-      },
-      {
-        type: "add",
-        path: "packages/{{ name }}/index.ts",
-        template: "export * from './src';",
       },
       {
         type: "add",
