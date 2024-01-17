@@ -8,11 +8,11 @@ export async function AuthShowcase() {
     return (
       <form>
         <Button
-          size="lg"
           formAction={async () => {
             "use server";
             await signIn("discord");
           }}
+          size="lg"
         >
           Sign in with Discord
         </Button>
@@ -28,11 +28,11 @@ export async function AuthShowcase() {
 
       <form>
         <Button
-          size="lg"
           formAction={async () => {
             "use server";
             await signOut();
           }}
+          size="lg"
         >
           Sign out
         </Button>

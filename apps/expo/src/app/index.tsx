@@ -54,10 +54,10 @@ function CreatePost() {
     <View className="mt-4">
       <TextInput
         className="mb-2 rounded bg-white/10 p-2 text-white"
+        placeholder="Title"
         placeholderTextColor="rgba(255, 255, 255, 0.5)"
         value={title}
         onChangeText={setTitle}
-        placeholder="Title"
       />
       {error?.data?.zodError?.fieldErrors.title && (
         <Text className="mb-2 text-red-500">
@@ -66,10 +66,10 @@ function CreatePost() {
       )}
       <TextInput
         className="mb-2 rounded bg-white/10 p-2 text-white"
+        placeholder="Content"
         placeholderTextColor="rgba(255, 255, 255, 0.5)"
         value={content}
         onChangeText={setContent}
-        placeholder="Content"
       />
       {error?.data?.zodError?.fieldErrors.content && (
         <Text className="mb-2 text-red-500">
@@ -115,9 +115,9 @@ export default function Index() {
         </Text>
 
         <Button
-          onPress={() => void utils.post.all.invalidate()}
-          title="Refresh posts"
           color={"#f472b6"}
+          title="Refresh posts"
+          onPress={() => void utils.post.all.invalidate()}
         />
 
         <View className="py-2">
@@ -127,9 +127,9 @@ export default function Index() {
         </View>
 
         <FlashList
+          ItemSeparatorComponent={() => <View className="h-2" />}
           data={postQuery.data}
           estimatedItemSize={20}
-          ItemSeparatorComponent={() => <View className="h-2" />}
           renderItem={(p) => (
             <PostCard
               post={p.item}

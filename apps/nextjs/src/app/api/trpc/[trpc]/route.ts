@@ -35,6 +35,7 @@ const handler = auth(async (req) => {
         headers: req.headers,
       }),
     onError({ error, path }) {
+      // eslint-disable-next-line no-console
       console.error(`>>> tRPC Error on '${path}'`, error);
     },
   });

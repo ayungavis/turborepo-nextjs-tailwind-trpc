@@ -33,6 +33,7 @@ export const createTRPCContext = async (opts: {
   const session = opts.session ?? (await auth());
   const source = opts.headers.get("x-trpc-source") ?? "unknown";
 
+  // eslint-disable-next-line no-console
   console.log(">>> tRPC Request from", source, "by", session?.user);
 
   return {
