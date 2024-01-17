@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "files": [
+    "tailwind.config.ts",
+    "postcss.js"
+  ],
   "exports": {
     ".": "./tailwind.config.ts",
     "./postcss": "./postcss.js"
@@ -23,9 +27,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:^0.2.0",
-    "@acme/prettier-config": "workspace:^0.1.0",
-    "@acme/tsconfig": "workspace:^0.1.0",
+    "@acme/eslint-config": "workspace:*",
+    "@acme/prettier-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
     "eslint": "^8.56.0",
     "postcss-import": "^16.0.0",
     "prettier": "^3.1.1",

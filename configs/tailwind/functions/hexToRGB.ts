@@ -1,4 +1,4 @@
-import { tinycolor } from "@ctrl/tinycolor";
+import { TinyColor } from "@ctrl/tinycolor";
 
 /**
  * Converts color input into `r g b` format using tinycolor lib
@@ -8,9 +8,10 @@ import { tinycolor } from "@ctrl/tinycolor";
 
 export const hexToRGB = (value: string): string => {
   // check if the color is valid
-  if (tinycolor(value).isValid) {
+  const isValid = new TinyColor(value).isValid;
+  if (isValid) {
     // get the rgb values of the color
-    const { r, g, b } = tinycolor(value).toRgb();
+    const { r, g, b } = new TinyColor(value).toRgb();
     // return the rgb values in a string
     return `${r} ${g} ${b}`;
   }

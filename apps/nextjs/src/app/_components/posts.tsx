@@ -47,7 +47,7 @@ export function CreatePostForm() {
     <Form {...form}>
       <form
         className="flex w-full max-w-2xl flex-col gap-4"
-        onSubmit={form.handleSubmit(async (data) => {
+        onSubmit={form.handleSubmit((data) => {
           createPost.mutate(data);
         })}
       >
@@ -138,8 +138,8 @@ export function PostCard(props: {
       </div>
       <div>
         <Button
-          variant="ghost"
           className="cursor-pointer text-sm font-bold uppercase text-primary hover:bg-transparent hover:text-white"
+          variant="ghost"
           onClick={() => deletePost.mutate(props.post.id)}
         >
           Delete
