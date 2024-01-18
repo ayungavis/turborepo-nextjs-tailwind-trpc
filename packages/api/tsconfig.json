@@ -1,4 +1,8 @@
 {
-  "extends": "@myapp/tsconfig/base.json",
-  "include": ["src", "index.ts", "transformer.ts"]
+  "extends": "@acme/tsconfig/base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
 }
