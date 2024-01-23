@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Pressable, Text, TextInput, View } from "react-native";
+import { Pressable, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link, Stack } from "expo-router";
 import { FlashList } from "@shopify/flash-list";
@@ -77,7 +77,7 @@ function CreatePost() {
         </Text>
       )}
       <Pressable
-        className="rounded bg-pink-400 p-2"
+        className="rounded bg-[#EF566B] p-2"
         onPress={() => {
           mutate({
             title,
@@ -85,7 +85,7 @@ function CreatePost() {
           });
         }}
       >
-        <Text className="font-semibold text-white">Publish post</Text>
+        <Text className="font-semibold">Publish post</Text>
       </Pressable>
       {error?.data?.code === "UNAUTHORIZED" && (
         <Text className="mt-2 text-red-500">
@@ -106,24 +106,18 @@ export default function Index() {
   });
 
   return (
-    <SafeAreaView className="bg-[#1F104A]">
+    <SafeAreaView className="bg-white">
       {/* Changes page title visible on the header */}
-      <Stack.Screen options={{ title: "Home Page" }} />
+      <Stack.Screen options={{ title: "Home" }} />
       <View className="h-full w-full p-4">
-        <Text className="pb-2 text-center text-5xl font-bold text-white">
-          Create <Text className="text-pink-400">T3</Text> Turbo
-        </Text>
+        <Text className="pb-2 text-5xl font-bold">Turborepo Boilerplate</Text>
 
-        <Button
-          color={"#f472b6"}
-          title="Refresh posts"
-          onPress={() => void utils.post.all.invalidate()}
-        />
+        <Pressable onPress={() => void utils.post.all.invalidate()}>
+          <Text className="text-[#EF566B]">Refresh posts</Text>
+        </Pressable>
 
         <View className="py-2">
-          <Text className="font-semibold italic text-white">
-            Press on a post
-          </Text>
+          <Text className="font-semibold italic">Press on a post</Text>
         </View>
 
         <FlashList

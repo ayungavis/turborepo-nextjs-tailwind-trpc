@@ -14,21 +14,21 @@ import "~/app/globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(
     env.VERCEL_ENV === "production"
-      ? "https://turbo.t3.gg"
+      ? "https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc"
       : "http://localhost:3000",
   ),
-  title: "Create T3 Turbo",
+  title: "Turborepo Boilerplate",
   description: "Simple monorepo with shared backend for web & mobile apps",
   openGraph: {
-    title: "Create T3 Turbo",
+    title: "Turborepo Boilerplate",
     description: "Simple monorepo with shared backend for web & mobile apps",
-    url: "https://create-t3-turbo.vercel.app",
-    siteName: "Create T3 Turbo",
+    url: "https://github.com/ayungavis/turborepo-nextjs-tailwind-trpc",
+    siteName: "Turborepo Boilerplate",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@jullerino",
-    creator: "@jullerino",
+    site: "@ayungavis",
+    creator: "@ayungavis",
   },
 };
 

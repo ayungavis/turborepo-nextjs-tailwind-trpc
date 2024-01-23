@@ -156,7 +156,7 @@ export function PostCardSkeleton(props: { pulse?: boolean }) {
       <div className="flex-grow">
         <h2
           className={cn(
-            "w-1/4 rounded bg-primary text-2xl font-bold",
+            "w-1/4 rounded bg-white/20 text-2xl font-bold",
             pulse && "animate-pulse",
           )}
         >
