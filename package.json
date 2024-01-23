@@ -1,35 +1,32 @@
 {
-  "name": "myapp",
+  "name": "monorepo-boilerplate",
   "private": true,
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.10"
   },
-  "packageManager": "pnpm@7.29.1",
+  "packageManager": "pnpm@8.14.0",
   "scripts": {
-    "build": "pnpm with-env turbo build",
-    "clean": "git clean -xdf node_modules",
+    "postinstall": "pnpm lint:ws",
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules && pnpm run clean:all",
+    "clean:all": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "clean:workspaces": "turbo clean",
-    "db:generate": "pnpm with-env turbo db:generate",
-    "db:push": "pnpm with-env turbo db:push db:generate",
-    "dev": "pnpm with-env turbo dev --parallel",
-    "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
-    "lint": "turbo lint && manypkg check",
-    "lint:fix": "turbo lint:fix && manypkg fix",
-    "type-check": "turbo type-check",
-    "with-env": "dotenv -e .env --"
+    "db:push": "pnpm -F db push",
+    "db:studio": "pnpm -F db studio",
+    "dev": "turbo dev --parallel",
+    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "typecheck": "turbo typecheck"
   },
-  "dependencies": {
-    "@eslint/js": "^8.37.0",
-    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
-    "@manypkg/cli": "^0.20.0",
-    "@myapp/eslint-config": "*",
-    "@types/prettier": "^2.7.2",
-    "dotenv-cli": "^7.1.0",
-    "eslint": "^8.34.0",
-    "postcss-import": "^15.1.0",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.4",
-    "turbo": "^1.8.3",
-    "typescript": "^4.9.5"
-  }
+  "devDependencies": {
+    "@acme/prettier-config": "workspace:*",
+    "@turbo/gen": "^1.10.16",
+    "prettier": "^3.1.0",
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2"
+  },
+  "prettier": "@acme/prettier-config"
 }

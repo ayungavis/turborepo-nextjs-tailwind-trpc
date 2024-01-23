@@ -1,9 +1,4 @@
 packages:
-  - apps/app
-  - packages/api
-  - packages/auth
-  - packages/db
-  - packages/design-system/react
-  - packages/design-system/react-native
-  - packages/utils
-  - packages/config/*
+  - apps/*
+  - packages/*
+  - configs/*

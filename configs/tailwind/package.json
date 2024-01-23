@@ -1,0 +1,45 @@
+{
+  "name": "@acme/tailwind-config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "tailwind.config.ts",
+    "postcss.js"
+  ],
+  "exports": {
+    ".": "./tailwind.config.ts",
+    "./postcss": "./postcss.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^4.0.2",
+    "autoprefixer": "^10.4.16",
+    "deepmerge": "^4.3.1",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/prettier-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "eslint": "^8.56.0",
+    "postcss-import": "^16.0.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@acme/eslint-config/base"
+    ]
+  },
+  "prettier": "@acme/prettier-config"
+}
